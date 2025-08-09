@@ -18,7 +18,7 @@ BASE_URL = "https://www.izzigo.tv/streamlocators/multirights/getPlayableUrlAndLi
 def obtener_token():
     global auth_token, token_expira
     logging.info("Usando token copiado de IZZI Go...")
-    auth_token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1aWQiOjg2MzIwMDQ0OSwidHkiOiJVU0VSIiwicGNpIjoiMTc0OTE1NzIiLCJod0lkIjoiYmE2NzEzNTUtMDJlZS00MGUwLThiMTUtMmZiZjMyZDFlZmNiIiwiZXhwIjoxNzU0NzAyOTE0LCJwbiI6IklaWkkiLCJjaWQiOjQyMTAyNDk3fQ.HJBO5vXMpjM4ByDAYXjq7NyO-l02s_Ge2Cy1WXOFSMg"
+    auth_token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1aWQiOjg2MzIwMDQ0OSwidHkiOiJVU0VSIiwicGNpIjoiMTc0OTE1NzIiLCJod0lkIjoiNmJkYTM1ZGYtMjVmMC00ZGZlLWI2ZDAtNjZiNTQwNzY1YmYzIiwiZXhwIjoxNzU0NzE0NDQ2LCJwbiI6IklaWkkiLCJjaWQiOjQyMTAyNDk3fQ.7FvzaL4KEyKXe1zGV2_LifOIqetEU2RAlzAWmPkuU6o"
     token_expira = int(time.time()) + 3500
 
 def monitor_token():
@@ -119,3 +119,4 @@ if __name__ == "__main__":
     obtener_token()
     threading.Thread(target=monitor_token, daemon=True).start()
     app.run(host="0.0.0.0", port=5000)
+

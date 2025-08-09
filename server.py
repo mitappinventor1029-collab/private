@@ -11,7 +11,7 @@ logging.basicConfig(level=logging.DEBUG, format='%(asctime)s %(levelname)s %(mes
 # Token y config IZZI (como en tu código)
 auth_token = None
 token_expira = 0
-DEVICE_ID = "ba671355-02ee-40e0-8b15-2fbf32d1efcb"
+DEVICE_ID = "6bda35df-25f0-4dfe-b6d0-66b540765bf3"
 PROFILE_ID = "15117588"
 BASE_URL = "https://www.izzigo.tv/streamlocators/multirights/getPlayableUrlAndLicense"
 
@@ -119,4 +119,5 @@ if __name__ == "__main__":
     obtener_token()
     threading.Thread(target=monitor_token, daemon=True).start()
     app.run(host="0.0.0.0", port=5000)
+
 
